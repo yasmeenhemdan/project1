@@ -1,0 +1,618 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.header{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    overflow: auto;
+    z-index: 5;
+}
+.logo{
+    height: 46px;
+    width: 70px;
+    margin-left: 150px;
+}
+.startList{
+    list-style: none;
+    float: right;
+    margin-right: 110px;
+    margin-top: 15px;
+}
+.startList-items{
+    display: inline;
+    margin-right: 25px;
+    position: relative;
+}
+.startList-items a{
+    text-decoration: none;
+    color: rgb(192, 80, 0);
+    font-size: 18px;
+}
+.startList-items:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(192, 80, 0);
+}
+.startList-items:hover::after{
+    width: 100%;
+    height: 1.5px;
+    transition: 0.5s;
+}
+/* ****************************home**************************** */
+.home {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-image: url(../img/0zcaUi.png);
+    position: relative;
+}
+.home-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+.home-content{
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 50vh;
+    transform: translate(-50%, -50%);
+}
+.tit-home {
+    color: rgb(255, 230, 206);
+    padding-bottom: 15px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 50px;
+}
+.p-home {
+    color: rgb(192, 80, 0);
+    font-size: 25px;
+    font-family: 'Nerko One', cursive;
+    padding-bottom: 15px;
+}
+.home-btn {
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 25px;
+    font-size: 15px;
+    font-family: 'Mali', cursive;
+    background-color: rgb(255, 230, 206);
+    cursor: pointer;
+}
+.home-btn:hover {
+    background-color: rgba(0, 0, 0, 1);
+    color: rgb(192, 80, 0);
+}
+/* ****************************about**************************** */
+.about {
+    background-color: rgb(255, 243, 232);
+}
+.sec-tit {
+    padding-top: 20vh;
+    text-align: center;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 40px;
+    padding-bottom: 10px;
+    color: rgb(0, 167, 114);
+}
+.bord {
+    height: 3px;
+    width: 100px;
+    background-color: rgb(0, 167, 114);
+    margin: auto;
+    margin-bottom: 10vh;
+}
+.about1 {
+    width: 20vw;
+    height: 45vh;
+    border: 3px solid rgb(73, 19, 19);
+    padding: 1%;
+    margin-left: 8vw;
+    text-align: center;
+    float: left;
+    position: relative;
+    margin-bottom: 15vh;
+}
+i {
+    padding: 20px 0;
+    font-size: 50px;
+    color: rgb(255, 204, 0);
+}
+.about-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+    padding-bottom: 25px;
+    font-size: 30px;
+}
+.about-p {
+    font-family: 'Mali', cursive;
+    color: rgb(192, 80, 0);
+    padding-bottom: 25px;
+    font-size: 20px;
+}
+.about-a {
+    text-decoration: none;
+    color: rgb(0, 167, 114);
+}
+.place {
+    visibility: hidden;
+}
+.about1:after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(101, 52, 17, 0.6);
+}
+.about1:hover::after{
+    height: 100%;
+    transition: 2s;
+    opacity: 0;
+}
+.clear{
+    clear: both;
+}
+/* ****************************portfolio**************************** */
+.portfolio {
+    background-color: rgb(255, 230, 206);
+    padding-bottom: 5vh;
+}
+.portfolio-container {
+    margin-left: 5vw;
+}
+.portfolio-item {
+    float: left;
+    width: 20vw;
+    height: 26vh;
+    text-align: center;
+    border: 3px solid rgb(73, 19, 19);
+    margin-bottom: 5vh;
+    position: relative;
+}
+.portfolio-item img {
+    width: 20vw;
+    height: 26vh;
+}
+.layer-content {
+    position: absolute;
+    top: -4vh;
+    left: -2vw;
+    padding-top: 12vh;
+    z-index: 3;
+    visibility: hidden;
+}
+.portfolio-item:hover .layer-content {
+    width: 24vw;
+    height: 22vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    visibility: visible;
+}
+.portfolio-item:hover .CATEGORY {
+    transition-delay: 0.25s;
+    color: rgb(255, 204, 0);
+    font-weight: bold;
+}
+.portfolio-item:hover .layer-tit {
+    transition-delay: 0.5s;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.portfolio-item:hover .layer-content i {
+    transition-delay: 0.75s;
+}
+/* ****************************offers**************************** */
+.offers {
+    background-color: rgb(255, 243, 232);
+}
+.offers-item {
+    float: left;
+    width: 25%;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    border: 3px dashed rgb(73, 19, 19);
+}
+.offers-item:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(101, 52, 17, 0.3);
+}
+.offers-item:hover::after {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 1s;
+}
+.offers-item:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(101, 52, 17, 0.3);
+}
+.offers-item:hover::before {
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    transition: 1s;
+}
+.offer-item-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+}
+.offer-item-p {
+    font-family: 'Mali', cursive;
+    color: rgb(192, 80, 0);
+}
+/* ****************************services**************************** */
+.services {
+    background-color: rgb(255, 230, 206);
+}
+.services-item {
+    width: 44%;
+    float: left;
+    margin-left: 5vw;
+    padding-bottom: 30px;
+}
+.services-logo {
+    padding-top: 27vh;
+    padding-left: 10vw;
+    width: 30vw;
+    height: 30vw;
+}
+.services-description {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+    font-size: 25px;
+}
+.services-list {
+    font-family: 'Mali', cursive;
+    color: rgb(192, 80, 0);
+    font-weight: bold;
+}
+.point-color {
+    float: left;
+    margin-left: 25vw;
+    color: rgb(0, 167, 114);
+    font-size: 25px;
+}
+.points-float {
+    float: left;
+    margin-left: 20px;
+    font-size: 25px;
+}
+.points-float:hover {
+    color: rgb(0, 167, 114);
+}
+/* ****************************numbers**************************** */
+.numbers {
+    height: 65vh;
+    position: relative;
+    background: url(../img/360_F_168095725_8CiJiUwH990vPbk36euOxLbfrI5hcumb.jpg) no-repeat fixed;
+    background-size: cover;
+    overflow: auto;
+}
+.numbers-item {
+    float: left;
+    padding: 20vh 0;
+    padding-left: 14vw;
+    text-align: center;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.numbers-num {
+    color: rgb(255, 230, 206);
+    font-family: 'Mali', cursive;
+}
+.numbers-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(255, 204, 0);
+    font-size: 20px;
+    text-transform: capitalize;
+}
+/* ****************************pricing**************************** */
+.pricing {
+    background-color: rgb(255, 243, 232);
+}
+.pricing-item {
+    float: left;
+    border: 3px solid rgb(73, 19, 19);
+    width: 21%;
+    height: 44vh;
+    margin-left: 6%;
+    margin-bottom: 10vh;
+    text-align: center;
+    padding: 6vh 2%;
+    line-height: 30px;
+    position: relative;
+}
+.pricing-list {
+    list-style: none;
+    padding: 20px 0;
+    font-family: 'Mali', cursive;
+    color: rgb(101, 52, 17);
+    font-weight: bold;
+}
+.pricing-item-price {
+    border: 3px solid rgb(73, 19, 19);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    color: rgb(255, 106, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.price {
+    padding-top: 25px;
+    font-size: 35px;
+}
+.month {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.book {
+    padding: 2px 20px;
+    border: 3px solid rgb(73, 19, 19);
+    color: rgb(255, 106, 0);
+    background-color: rgb(255, 243, 232);
+    font-size: 15px;
+    font-weight: bold;
+}
+.pricing-item-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+    font-size: 25px;
+    line-height: 60px;
+}
+.pricing-item:after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    left: 0;
+    top: 0;
+    background-color: rgba(84, 84, 84, 0.2);
+}
+.pricing-item:hover::after {
+    width: 100%;
+    transition: 1s;
+}
+.pricing-item:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(84, 84, 84, 0.2);
+}
+.pricing-item:hover::before {
+    width: 100%;
+    transition: 1s;
+}
+.pricing-item:hover .pricing-item-price {
+    color: rgb(0, 207, 141);
+    transition: 1s;
+}
+.pricing-item:hover .book {
+    color: rgb(0, 207, 141);
+    transition: 1s;
+}
+.pricing-item:hover .pricing-item-tit {
+    color: rgb(255, 119, 0);
+    transition: 1s;
+}
+.pricing-item:hover .pricing-list {
+    color: rgb(255, 119, 0);
+    transition: 1s;
+}
+/* ****************************supervisor**************************** */
+.super {
+    height: 50vh;
+    position: relative;
+    background-image: url(../img/Black\ and\ White\ Simple\ Logo.png) ;
+    background-attachment: fixed;
+    background-size: cover;
+    overflow: auto;
+}
+.super-item {
+    padding: 15vh 0;
+    padding-left: 17vw;
+    float: left;
+    width: 25vw;
+}
+.super-name {
+    float: right;
+    margin-top: 20px;
+    margin-right: 160px;
+}
+.super-img {
+    border-radius: 50%;
+}
+.super-coach {
+    color: rgb(255, 230, 206);
+    font-family: 'Kaushan Script', cursive;
+}
+.super-category {
+    color: rgb(255, 204, 0);
+    font-family: 'Mali', cursive;
+}
+.super-description {
+    color: rgb(255, 230, 206);
+    font-family: 'Nerko One', cursive;
+    font-size: 20px;
+}
+/* ****************************Team**************************** */
+.team {
+    background-color: rgb(255, 230, 206);
+    padding-bottom: 5vh;
+}
+.content {
+    width: 80%;
+    margin: auto;
+}
+.team-item {
+    float: left;
+    background-color: rgb(255, 243, 232);
+    width: 27%;
+    padding: 18px 16px;
+    text-align: center;
+    position: relative;
+}
+.mg {
+    margin: 0 5%;
+}
+.team-img {
+    width: 90%;
+    margin: auto;
+    position: relative;
+}
+.team-img img {
+    width: 100%;
+}
+.team-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+}
+.team-item:hover .team-overlay {
+    visibility: visible;
+}
+.team-overlay i {
+    display: block;
+    line-height: 20px;
+    font-size: 20px;
+}
+.team-overlay a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    text-decoration: none;
+}
+.team-info-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+    padding: 25px 0;
+}
+.team-info-ca {
+    font-family: 'Mali', cursive;
+    color: rgb(192, 80, 0);
+    padding-bottom: 25px;
+}
+.team-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0%;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.team-item:hover::after {
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+/* ****************************blog**************************** */
+.blog {
+    background-color: rgb(255, 243, 232);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 5vh;
+}
+.blog-item {
+    float: left;
+    background-color: rgb(255, 230, 206);
+    width: 27%;
+    padding: 18px 16px;
+    position: relative;
+}
+.blog-item img {
+    width: 70%;
+    height: 200px;
+}
+.blog-list {
+    font-size: 15px;
+}
+.blog-list i {
+    font-size: 15px;
+    margin: 0 5px 0 10px;
+}
+.blog-tit {
+    font-family: 'Nerko One', cursive;
+    color: rgb(101, 52, 17);
+    padding: 15px 0;
+}
+.blog-description {
+    font-family: 'Mali', cursive;
+    color: rgb(192, 80, 0);
+    padding-bottom: 15px;
+}
+.blog-item:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 0;
+    top: 0;
+    left: 0;
+    background-color: rgba(192, 80, 0, 0.2);
+}
+.blog-item:hover::after {
+    height: 100%;
+    transition: 1s;
+}
+.hide{
+    visibility: hidden;
+}
+/* ****************************footer**************************** */
+.footer {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 10vh 0;
+}
+.footer-links a {
+    margin: 0 10px;
+}
+.footer-links i {
+    color: rgb(255, 0, 0);
+    font-size: 30px;
+    width: 40px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+}
+.footer p {
+    padding-top: 20px;
+    color: rgb(192, 80, 0);
+    font-family: 'Mali', cursive;
+}
